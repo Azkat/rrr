@@ -1,0 +1,9 @@
+<h1>Projects</h1>
+
+<ul>
+
+  <% @projects.each do |project| %>
+    <li>タイトル：<%= link_to project.title, project_path(project.id) %></li>
+  <% end %>
+  <div id="content"></div>
+</ul>
