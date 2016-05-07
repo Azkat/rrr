@@ -45,5 +45,6 @@ group :development do
   gem 'spring'
 
   gem 'react-rails', '~> 1.4.0'
+  gem 'browserify-rails'
 end
 
