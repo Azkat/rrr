@@ -3,7 +3,7 @@ var React = require('react');
 var Widgets = React.createClass({
 
   render: function() {
-    return <div>Hello!! React</div>;
+    return <div>Hello!! React!</div>;
   }
 });
 

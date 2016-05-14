@@ -3,8 +3,14 @@
 <ul>
 
   <% @projects.each do |project| %>
-    <li>タイトル：<%= link_to project.title, project_path(project.id) %></li>
+    <li>
+      タイトル：<%= link_to project.title, project_path(project.id) %>
+      <%= link_to("[edit]", edit_project_path(project.id) ) %>
+      <%= link_to("[delete]", project_path(project.id) , method: :delete, data: {confirm: "are you sure?"}) %>
+    </li>
   <% end %>
+
+  <%= link_to "ADD NEW", new_project_path %>
 
   <div style="font-size:20px;">
     <%= react_component 'Widgets' %>

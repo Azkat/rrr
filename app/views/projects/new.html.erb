@@ -1,0 +1,16 @@
+<h1>ADD NEW</h1>
+
+<%= form_for @project , :html =>{:class=>''} do |f| %>
+
+<p>
+  <%= f.label :title , :class=>'form-inline'%>
+  <%= f.text_field :title , :class=>'form-control form-inline'%>
+  <%= @project.errors.messages[:title][0] %>
+  <%  %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+
+<% end %>
