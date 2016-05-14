@@ -24,5 +24,6 @@ module Rrr
     config.active_record.raise_in_transactional_callbacks = true
 
     config.browserify_rails.commandline_options = "--transform reactify"
+    config.assets.initialize_on_precompile = false
   end
 end
