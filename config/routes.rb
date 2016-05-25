@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   root 'projects#index'
 
   resources :projects
-  get 'projects/:id' => 'projects#show'
+
+  resources :tasks
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
