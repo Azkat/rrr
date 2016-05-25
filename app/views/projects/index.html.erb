@@ -3,10 +3,26 @@
 <ul>
 
   <% @projects.each do |project| %>
-    <li>タイトル：<%= link_to project.title, project_path(project.id) %></li>
+    <li>
+      タイトル：<%= link_to project.title, project_path(project.id) %> 
+      <span><%= link_to("edit", edit_project_path(project.id)) %></span>
+      <span><%= link_to("delete", project_path(project.id)  , :method => :delete) %></span>
+    </li>
   <% end %>
+
+  <%= link_to("NEW", new_project_path) %>
 
   <div style="font-size:20px;">
     <%= react_component 'Widgets' %>
   </div>
 </ul>
+
+
+<div class="row">
+  <div class="col-xs-3">
+    <%= label_tag :name, "名前" %>
+    <%= text_field_tag :name, "", "ng-model" => "name",  :class => "form-control" %>
+  </div>
+</div>
+
+<p>こんにちは、「{{name}}」さん。</p>
