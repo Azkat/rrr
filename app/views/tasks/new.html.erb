@@ -1,0 +1,10 @@
+<h1>NEW</h1>
+
+<%= form_for @task do |f| %>
+	<% @projects.each do |p| %>
+		<%= f.radio_button :project_id, p.id %>
+		<%= f.label p.title %>
+  <% end %>
+  <%= f.text_field :title, :class=>'form-control' %>
+  <%= f.submit 'SEND' ,:class=>'btn' %>
+<% end %>　
