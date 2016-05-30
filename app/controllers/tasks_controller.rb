@@ -10,9 +10,8 @@ class TasksController < ApplicationController
 
 	def create
 		@task = Task.new(task_params)
-		
 		if @task.save
-			redirect_to root_path
+			redirect_to project_path(id: @task.project_id)
 		else
 			render 'new'
 		end
