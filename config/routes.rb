@@ -6,6 +6,14 @@ Rails.application.routes.draw do
 
   root 'projects#index'
 
+<<<<<<< HEAD
+=======
+  resources :projects
+
+  resources :tasks
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+>>>>>>> fcd4a41bf851c77425e3cca268b1a2577f7bb543
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

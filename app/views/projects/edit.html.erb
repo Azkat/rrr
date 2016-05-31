@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>EDIT</h1>
 
 <%= form_for @project do |f| %>
@@ -14,3 +15,12 @@
 </p>
 
 <% end %>
+=======
+<% set_meta_tags title: 'EDIT ' + @project.title %>
+<h1>EDIT</h1>
+
+<%= form_for @project do |f| %>
+  <%= f.text_field :title, :class=>'form-control' %>
+  <%= f.submit 'SEND' ,:class=>'btn' %>
+<% end %>　
+>>>>>>> fcd4a41bf851c77425e3cca268b1a2577f7bb543

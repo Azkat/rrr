@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 <h1><%=  @project.title %> (ID→<%=  @project.id %>)</h1>
 
 <ul>
 
   <li></li>
 
+=======
+
+<h1><%= @project.title %> (ID→<%=  @project.id %>)</h1>
+<ul>
+	<% @tasks.each do |task| %>
+	<li><%= task.title %></li>
+	<% end %>
+>>>>>>> fcd4a41bf851c77425e3cca268b1a2577f7bb543
 </ul>

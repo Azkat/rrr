@@ -2,6 +2,14 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+<<<<<<< HEAD
+=======
+  breadcrumbs:
+    application:
+      root: "Index"
+    pages:
+      pages: "Pages"
+>>>>>>> fcd4a41bf851c77425e3cca268b1a2577f7bb543
   helpers:
     actions: "Actions"
     links:
