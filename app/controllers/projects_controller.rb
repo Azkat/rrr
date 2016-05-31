@@ -8,6 +8,7 @@ class ProjectsController < ApplicationController
 
 	def show
 		@tasks = Task.where(project_id: @project.id)
+		Rails.logger.level = Logger::DEBUG
 	end
 
 	def new
